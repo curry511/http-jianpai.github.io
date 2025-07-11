@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #343a40;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --gray-color: #6c757d;
+    --white-color: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* 导航栏样式 */
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--secondary-color);
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* 首页横幅样式 */
+#home {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background-color: var(--light-color);
+}
+
+#home h1 {
+    line-height: 1.2;
+}
+
+#home .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+#home .btn-outline-dark {
+    color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+
+/* 产品展示样式 */
+#products {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+#products .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#products .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 产品优势样式 */
+#advantages {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: var(--light-color);
+}
+
+#advantages .bg-white {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#advantages .bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 定制流程样式 */
+#process {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.process-steps {
+    position: relative;
+}
+
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background-color: var(--primary-color);
+    z-index: 1;
+}
+
+.process-step {
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* 关于我们样式 */
+#about {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: var(--light-color);
+}
+
+/* 联系方式样式 */
+#contact {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+#contact .bg-white {
+    border-radius: 0.5rem;
+}
+
+#contact form .form-control {
+    border-radius: 0.25rem;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+footer a {
+    color: var(--gray-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--white-color);
+}
+
+/* 响应式样式 */
+@media (max-width: 992px) {
+    .process-steps::before {
+        left: 10%;
+        right: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-steps::before {
+        display: none;
+    }
+
+    #home {
+        padding-top: 8rem;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    .process-step {
+        margin-bottom: 2rem;
+    }
+}
