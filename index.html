@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简派全铝定制 - 高端阳台柜定制专家</title>
+    <meta name="description" content="简派全铝定制专注于高品质阳台柜定制，采用全铝材质，防水防潮，环保耐用，价格1280元/平方，专业设计团队为您打造专属阳台空间。">
+    <meta name="keywords" content="全铝阳台柜,阳台柜定制,简派全铝定制,阳台柜价格,1280元/平方">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #3a7bd5;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b35;
+            --text-color: #333;
+            --light-gray: #e9ecef;
+            --dark-gray: #495057;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏样式 */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .contact-btn {
+            background-color: var(--accent-color);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .contact-btn:hover {
+            background-color: #e55a2a !important;
+        }
+
+        /* 英雄区域样式 */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .price-tag {
+            display: inline-block;
+            background-color: var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #2d62b3;
+        }
+
+        /* 特点部分样式 */
+        .features {
+            padding: 80px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* 公司优势样式 */
+        .company-advantages {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+        }
+
+        .company-advantages h4 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .advantage-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .advantage-icon {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .advantage-text h5 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .advantage-text p {
+            font-size: 14px;
+            color: var(--dark-gray);
+        }
+
+        .about-cta {
+            font-weight: bold;
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* 产品展示样式 */
+        .products {
+            padding: 80px 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* 价格计算器样式 */
+        .price-calculator {
+            padding: 80px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .calculator-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .calculator-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .calculator-result {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light-gray);
+            border-radius: 5px;
+        }
+
+        .result-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* 关于我们样式 */
+        .about {
+            padding: 80px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        /* 联系我们样式 */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2d62b3;
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-cube" style="font-size: 30px; color: var(--primary-color);"></i>
+                    <div class="logo-text">简派全铝定制</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#features">产品特点</a></li>
+                    <li><a href="#products">案例展示</a></li>
+                    <li><a href="#calculator">价格计算</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#contact" class="contact-btn">立即咨询</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>简派全铝定制</h1>
+            <p>高品质阳台柜定制专家，为您打造专属阳台空间</p>
+            <div class="price-tag">1280元/平方 起</div>
+            <a href="#calculator" class="cta-btn">价格计算</a>
+        </div>
+    </section>
+
+    <!-- 产品特点 -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">产品特点</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>全铝材质</h3>
+                    <p>采用高品质铝合金材料，防水防潮，防蛀防腐，经久耐用，使用寿命长达50年以上。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>环保健康</h3>
+                    <p>零甲醛释放，无异味，绿色环保，呵护您和家人的健康，打造安全家居环境。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>个性定制</h3>
+                    <p>根据您的阳台尺寸和需求，提供一对一专业设计服务，打造独一无二的专属阳台柜。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                    <h3>精湛工艺</h3>
+                    <p>采用先进生产工艺，精密加工，无缝拼接，表面处理细腻，质感出众。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>易清洁保养</h3>
+                    <p>表面光滑，污渍易擦拭，日常保养简单方便，无需特殊维护，节省您的时间和精力。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                    <h3>免费安装</h3>
+                    <p>专业团队上门测量、设计、安装，一站式服务，让您省心省力，全程无忧。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示 -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">案例展示</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="现代简约风格阳台柜">
+                    </div>
+                    <div class="product-info">
+                        <h3>现代简约风格</h3>
+                        <p>简洁线条，时尚设计，适合现代家居风格</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1591382696684-62515e01950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="北欧风格阳台柜">
+                    </div>
+                    <div class="product-info">
+                        <h3>北欧风格</h3>
+                        <p>清新自然，明亮舒适，营造温馨居家氛围</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1580518845706-053816a550e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="轻奢风格阳台柜">
+                    </div>
+                    <div class="product-info">
+                        <h3>轻奢风格</h3>
+                        <p>金属质感，精致细节，彰显品质生活</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格计算器 -->
+    <section class="price-calculator" id="calculator">
+        <div class="container">
+            <h2 class="section-title">价格计算器</h2>
+            <div class="calculator-container">
+                <form class="calculator-form" id="priceForm">
+                    <div class="form-group">
+                        <label for="length">阳台长度 (米)</label>
+                        <input type="number" id="length" name="length" min="0" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="width">阳台宽度 (米)</label>
+                        <input type="number" id="width" name="width" min="0" step="0.01" required>
+                    </div>
+                </form>
+                <div class="calculator-result">
+                    <div class="result-value" id="totalPrice">0 元</div>
+                    <p>预估总价（按1280元/平方计算）</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1581579438747-46a5cd17d8f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="关于简派全铝定制">
+            </div>
+            <div class="about-text">
+                <h3>关于简派全铝定制</h3>
+                <p>简派全铝定制成立于2010年，是华南地区领先的全铝家居定制品牌，专注于高品质阳台柜、衣柜、橱柜等全铝产品的研发、设计与生产。</p>
+                <p>我们始终坚持"以铝代木，绿色家居"的理念，引进德国先进生产设备和工艺技术，产品通过国家环保认证，甲醛释放量远低于国家标准，为千万家庭打造健康舒适的家居环境。</p>
+                
+                <div class="company-advantages">
+                    <h4>我们的优势</h4>
+                    <div class="advantages-grid">
+                        <div class="advantage-item">
+                            <div class="advantage-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="advantage-text">
+                                <h5>13年行业经验</h5>
+                                <p>专注全铝定制领域，技术成熟，品质保障</p>
+                            </div>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon"><i class="fas fa-certificate"></i></div>
+                            <div class="advantage-text">
+                                <h5>国家专利技术</h5>
+                                <p>拥有16项全铝家居结构专利技术</p>
+                            </div>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon"><i class="fas fa-users"></i></div>
+                            <div class="advantage-text">
+                                <h5>专业设计团队</h5>
+                                <p>30+资深设计师，一对一专属定制服务</p>
+                            </div>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon"><i class="fas fa-truck-fast"></i></div>
+                            <div class="advantage-text">
+                                <h5>极速配送安装</h5>
+                                <p>珠三角地区72小时快速响应，免费上门安装</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="about-cta">选择简派全铝定制，让您的家居空间兼具美观、实用与环保，开启健康品质生活新篇章！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>立即咨询</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-text">
+                            <p>咨询热线</p>
+                            <p>15299199879</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <p>电子邮箱</p>
+                            <p>info@jianpaicustom.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text">
+                            <p>公司地址</p>
+                            <p>广州市增城区简派全铝定制</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    简派全铝定制
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#features">产品特点</a></li>
+                        <li><a href="#products">案例展示</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>产品系列</h4>
+                    <ul>
+                        <li><a href="#">阳台柜</a></li>
+                        <li><a href="#">衣柜</a></li>
+                        <li><a href="#">橱柜</a></li>
+                        <li><a href="#">浴室柜</a></li>
+                        <li><a href="#">书柜</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-phone"></i> 15299199879</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@jianpaicustom.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 广州市增城区简派全铝定制</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 简派全铝定制 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 价格计算器功能
+        document.getElementById('priceForm').addEventListener('input', function() {
+            const length = parseFloat(document.getElementById('length').value) || 0;
+            const width = parseFloat(document.getElementById('width').value) || 0;
+            const area = length * width;
+            const price = area * 1280;
+            document.getElementById('totalPrice').textContent = price.toFixed(2) + ' 元';
+        });
+
+        // 表单提交处理
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
